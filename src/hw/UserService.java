@@ -27,9 +27,13 @@ public class UserService {
             validate=false;
         }
 
-        Pattern pattern = Pattern.compile("[a-z]*[A-Z]*[0-9]*");
+        Pattern p1 = Pattern.compile("[a-z]");
+        Pattern p2 = Pattern.compile("[A-Z]");
+        Pattern p3 = Pattern.compile("[0-9]");
         if(userInfo.getPassword().length()>=8 &&
-                pattern.matcher(userInfo.getPassword()).find()){
+                p1.matcher(userInfo.getPassword()).find() &&
+                p2.matcher(userInfo.getPassword()).find() &&
+                p3.matcher(userInfo.getPassword()).find()){
 
 
         }else {

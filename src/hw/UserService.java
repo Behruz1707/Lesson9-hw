@@ -5,9 +5,9 @@ import java.util.regex.Pattern;
 public class UserService {
     private UserInfo userInfo;
     public void checkingUserInfo(UserInfo userInfo){
-        boolean validate = true;
+        boolean validate;
         if(Pattern.matches("[A-Z][a-z]*\\ [A-Z][a-z]*",userInfo.getFullName())){
-
+            validate = true;
         }else {
             System.out.println("Fullname is invalid");
             validate=false;
